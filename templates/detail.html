@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+{{template "_head.html" .Title}}
+<body>
+{{template "_header.html" .Active}}
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="page-head-line">Detail Page!</h4>
+                </div>
+
+            </div>
+            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {{range .Detail}}
+                                        <tr>
+                                            <td><a href="/detail/{{.Id}}">{{.Id}}</a></td>
+                                            <td>{{.FirstName}}</td>
+                                            <td>{{.LastName}}</td>
+                                            <td>{{.UserName}}</td>
+                                        </tr>
+                                      {{end}}
+                                    </tbody>
+                                </table>
+                            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-warning">
+                        This is blank page for which you can customize for your project.
+                        Use this admin template 100% free to use for personal and commercial use which is crafted by
+                        <br />
+                        <a href="http://www.designbootstrap.com/" target="_blank">DesignBootstrap.com</a> . For more free templates and snippets keep looking <a href="http://www.designbootstrap.com/" target="_blank">DesignBootstrap.com</a> . Hope you will like our work
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT-WRAPPER SECTION END-->
+    <footer>
+       {{template "_footer.html"}}
+    </footer>
+    <!-- FOOTER SECTION END-->
+    <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY SCRIPTS -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
